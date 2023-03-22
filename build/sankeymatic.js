@@ -504,7 +504,9 @@ const msg = {
     Array.from(msg.areas.values())
       .map((a) => a.id)
       .forEach((id) => {
-        el(id).replaceChildren();
+        if (el(id)) {
+          el(id).replaceChildren();
+        }
       });
   },
 };
